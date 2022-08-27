@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class PhoneNumber {
@@ -12,6 +11,10 @@ public class PhoneNumber {
                 return;
             }
             PhoneNumber = PhoneNumber.substring(3,PhoneNumber.length());
+        }
+        if(PhoneNumber.length() != 11){
+            System.out.println("Given number is not a valid Bangladeshi Number");
+            return;
         }
         String operatorCode = PhoneNumber.substring(1,3);
         if(operatorCode.equals("11")){
